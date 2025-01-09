@@ -6,4 +6,7 @@
     </style>
 
     <style name="Theme.XPense" parent="Base.Theme.XPense" />
+    <style name="Base.Widget.Material3.BottomNavigationView." parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@null</item>
+    </style>
 </resources>

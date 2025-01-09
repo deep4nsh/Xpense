@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/anek_odia_thin</item>
+        <item>@font/archivo_black</item>
+        <item>@font/candal</item>
+        <item>@font/konkhmer_sleokchher</item>
+    </array>
+</resources>
