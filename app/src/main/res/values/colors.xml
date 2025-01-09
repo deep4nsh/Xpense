@@ -5,6 +5,12 @@
     <color name="themeColorPrimary">#151729</color>
     <color name="textColor">#353535</color>
     <color name="greenColor">#4CAF50</color>
-    <color name="redColor">#EB0E0E</color>
+    <color name="redColor">#FF1300</color>
+    <color name="category1">#E8BF2B</color>
+    <color name="category2">#5BB40D</color>
+    <color name="category3">#C71515</color>
+    <color name="category4">#0E84EB</color>
+    <color name="category5">#39082D</color>
+    <color name="category6">#B5C673</color>
 
 </resources>
