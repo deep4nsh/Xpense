@@ -3,14 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
 
     <ImageView
-        android:id="@+id/categoryImage"
+        android:id="@+id/categoryIcon"
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:background="@drawable/category_bg"
         android:padding="10dp"
+        android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout4"
@@ -23,7 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@+id/categoryImage"
+        app:layout_constraintStart_toEndOf="@+id/categoryIcon"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView

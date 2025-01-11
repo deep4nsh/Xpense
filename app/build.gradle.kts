@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    id ("realm-android")
+
 }
 
 android {
@@ -16,11 +18,11 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures{
-        viewBinding =true
+    buildFeatures {
+        viewBinding = true
     }
-    buildTypes {
 
+    buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -29,6 +31,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -36,7 +39,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

@@ -13,4 +13,11 @@
     <color name="category5">#39082D</color>
     <color name="category6">#B5C673</color>
 
+    <color name="bankColor">#90D93030</color>
+    <color name="cashColor">#66C65A12</color>
+    <color name="UPIColor">#6B07192F</color>
+    <color name="cardColor">#92300338</color>
+    <color name="defaultColor">#66A78F16</color>
+
+
 </resources>

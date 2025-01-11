@@ -25,6 +25,9 @@ import deedev.xpense.databinding.FragmentAddTransactionBinding;
 import deedev.xpense.databinding.ListDialogBinding;
 import deedev.xpense.models.Account;
 import deedev.xpense.models.Category;
+import deedev.xpense.models.Transaction;
+import deedev.xpense.utils.Constants;
+import deedev.xpense.utils.Helper;
 
 public class AddTransactionFragment extends BottomSheetDialogFragment {
 
@@ -48,17 +51,21 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
 
     }
     FragmentAddTransactionBinding binding;
+    Transaction transaction;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentAddTransactionBinding.inflate(inflater);
 
+        transaction = new Transaction();
         binding.incomeBtn.setOnClickListener(view -> {
             binding.incomeBtn.setBackground(getContext().getDrawable(R.drawable.income_selector));
             binding.expenseBtn.setBackground(getContext().getDrawable(R.drawable.default_selector_white));
             binding.expenseBtn.setTextColor(getContext().getColor(R.color.textColor));
             binding.incomeBtn.setTextColor(getContext().getColor(R.color.greenColor));
+
+            transaction.setType(Constants.INCOME);
 
         });
 
@@ -67,6 +74,9 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
             binding.expenseBtn.setBackground(getContext().getDrawable(R.drawable.expense_selector));
             binding.incomeBtn.setTextColor(getContext().getColor(R.color.textColor));
             binding.expenseBtn.setTextColor(getContext().getColor(R.color.redColor));
+
+            transaction.setType(Constants.EXPENSE);
+
 
         });
 
@@ -80,10 +90,11 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
                     calendar.set(calendar.DAY_OF_MONTH, datePicker.getDayOfMonth());
                     calendar.set(calendar.MONTH, datePicker.getMonth());
                     calendar.set(calendar.YEAR, datePicker.getYear());
-                    SimpleDateFormat dateFormat=new SimpleDateFormat("dd MMMM, yyyy");
-                    String dateToShow=dateFormat.format(calendar.getTime());
+                    String dateToShow= Helper.formatDate(calendar.getTime());
 
                     binding.date.setText(dateToShow);
+
+                    transaction.setDate(calendar.getTime());
                 });
                 datePickerDialog.show();
             }
@@ -102,10 +113,11 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
             categories.add(new Category("Rent", R.drawable.rent, R.color.category5));
             categories.add(new Category("Other", R.drawable.other, R.color.category6));
 
-            CategoryAdapter categoryAdapter = new CategoryAdapter(getContext(), categories, new CategoryAdapter.CategoryClickListener() {
+            CategoryAdapter categoryAdapter = new CategoryAdapter(getContext(), Constants.categories, new CategoryAdapter.CategoryClickListener() {
                 @Override
                 public void onCategoryClicked(Category category) {
                     binding.category.setText(category.getCategoryName());
+                    transaction.setCategory(category.getCategoryName());
                     categoryDialog.dismiss();
                 }
             });
@@ -132,6 +144,7 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
                 @Override
                 public void onAccountSelected(Account account) {
                     binding.account.setText(account.getAccountName());
+                    transaction.setAccount(account.getAccountName());
 
                     accountsDialog.dismiss();
                 }
@@ -141,6 +154,19 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
             dialogBinding.recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
             accountsDialog.show();
 
+        });
+
+        binding.saveTransactionBtn.setOnClickListener(c -> {
+            double amount =Double.parseDouble(binding.amount.getText().toString());
+            String note = binding.note.getText().toString();
+
+            if(transaction.getType()==Constants.EXPENSE){
+                amount*=-1;
+
+            }else {
+                transaction.setAmount(amount);
+            }
+            transaction.setNote(note);
         });
 
         return binding.getRoot();
