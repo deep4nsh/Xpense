@@ -9,4 +9,9 @@ public class Helper {
         return simpleDateFormat.format(date);
     }
 
+
+    public static String formatDateByMonth(Date date) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMMM, yyyy");
+        return simpleDateFormat.format(date);
+    }
 }

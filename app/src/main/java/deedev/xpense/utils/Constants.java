@@ -9,6 +9,14 @@ public class Constants {
     public static String INCOME = "INCOME";
     public static String EXPENSE = "EXPENSE";
     public static ArrayList<Category> categories;
+    public static int SELECTED_TAB = 0;
+    public static int SELECTED_TAB_STATS = 0;
+    public static String SELECTED_STATS_TYPE = Constants.INCOME;
+    public static int DAILY=0;
+    public static int MONTHLY=1;
+    public static int CALENDER=2;
+    public static int SUMMARY=3;
+    public static int NOTES=4;
 
 
     public static void setCategories() {
@@ -22,17 +30,25 @@ public class Constants {
     }
 
     public static Category getCategoryDetails(String categoryName) {
-        for (Category cat:
-                categories) {
-            if(cat.getCategoryName().equals(categoryName)){
+        if (categoryName == null) {
+            return null; // Handle null case
+        }
+
+        for (Category cat : categories) {
+            if (categoryName.equals(cat.getCategoryName())) { // Ensure categoryName is not null
                 return cat;
             }
-            
         }
-        return null;
+
+        return null; // Return null if no category matches
     }
-    public static int getAccountsColor(String accountName){
-        switch (accountName){
+
+    public static int getAccountsColor(String accountName) {
+        if (accountName == null) {
+            return R.color.defaultColor; // Return a default color if accountName is null
+        }
+
+        switch (accountName) {
             case "Cash":
                 return R.color.cashColor;
             case "Bank":
@@ -42,9 +58,9 @@ public class Constants {
             case "Card":
                 return R.color.cardColor;
             default:
-                return R.color.defaultColor;
-
+                return R.color.defaultColor; // Default color if no match is found
         }
     }
+
 
 }
