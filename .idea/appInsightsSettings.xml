@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="deedev.xpense" />
+                  <option name="mobileSdkAppId" value="1:1076901283955:android:b05b15d1cf459cc993c206" />
+                  <option name="projectId" value="xpense10" />
+                  <option name="projectNumber" value="1076901283955" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

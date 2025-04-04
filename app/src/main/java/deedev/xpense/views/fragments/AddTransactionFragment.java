@@ -47,8 +47,6 @@ public class AddTransactionFragment extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentAddTransactionBinding.inflate(inflater);
-
-
         transaction = new Transaction();
 
         binding.incomeBtn.setOnClickListener(view -> {

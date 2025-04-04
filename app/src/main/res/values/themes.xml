@@ -1,12 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Base.Theme.XPense" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Customize your light theme here -->
+        <!-- Uncomment and modify the following line to set a custom primary color -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <!-- Application theme inheriting from the base theme -->
     <style name="Theme.XPense" parent="Base.Theme.XPense" />
-    <style name="Base.Widget.Material3.BottomNavigationView." parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+
+    <!-- Custom style for BottomNavigationView -->
+    <style name="Base.Widget.Material3.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="itemIconTint">@null</item>
     </style>
 </resources>

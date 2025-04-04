@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1076901283955",
+    "project_id": "xpense10",
+    "storage_bucket": "xpense10.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076901283955:android:b05b15d1cf459cc993c206",
+        "android_client_info": {
+          "package_name": "deedev.xpense"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABENfetOz9naTFBl1mN9Sg4S8KPWoEB7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
