@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1076901283955",
+    "project_id": "xpense10",
+    "storage_bucket": "xpense10.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076901283955:android:b05b15d1cf459cc993c206",
+        "android_client_info": {
+          "package_name": "deedev.xpense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076901283955-kh32l0mrs4oo71d98jcu9h8kqcj6d7l7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "deedev.xpense",
+            "certificate_hash": "89da4a449b572e449c664ce99e394617fed19427"
+          }
+        },
+        {
+          "client_id": "1076901283955-pm2q1r14gvrd3q7t625smqjm0shek8ug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABENfetOz9naTFBl1mN9Sg4S8KPWoEB7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076901283955-pm2q1r14gvrd3q7t625smqjm0shek8ug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

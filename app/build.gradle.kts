@@ -50,16 +50,19 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.credentials)
     implementation(libs.credentials.play.services.auth)
+    implementation (libs.play.services.auth)
     implementation(libs.googleid)
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.storage)
     implementation(libs.firebase.inappmessaging.display)
-    implementation(libs.play.services.ads)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("org.jetbrains.kotlin:kotlin-script-runtime:1.8.22")
+    implementation(libs.kotlin.script.runtime)
     implementation (libs.anychart.android)
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
+
 
 }
